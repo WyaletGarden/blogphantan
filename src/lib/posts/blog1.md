@@ -5,7 +5,7 @@ updated: "2025-04-29"
 categories:
   - "distributed-systems"
   - "networking"
-coverImage: "/images/distributed-system-cover.jpg"
+coverImage: "/images/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
 coverWidth: 16
 coverHeight: 9
 excerpt: Bài viết giới thiệu hệ thống phân tán, các khái niệm, kiến trúc và ví dụ minh họa.
