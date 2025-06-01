@@ -26,7 +26,6 @@ RabbitMQ hoạt động dựa trên các thành phần chính:
 3. **Consumer**: Ứng dụng nhận message
 4. **Exchange**: Điểm trung gian nhận message từ producer và route đến queue
 
-![Cơ chế hoạt động của RabbitMQ](/images/rabbitmq.jpg)
 
 ### 3. Các chức năng chính
 

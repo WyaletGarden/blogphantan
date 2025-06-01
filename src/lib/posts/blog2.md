@@ -38,7 +38,67 @@ excerpt: Bài viết giới thiệu tiến trình và luồng
 | 12  | Phần mềm diệt virus      | Quét nhiều tệp cùng lúc bằng đa luồng để tiết kiệm thời gian.       |
 
 ### 3. So sánh khi nào nên dùng Thread, Process, hoặc cả hai
-![ảnh](/images/b3.jpg)
+Việc lựa chọn sử dụng **Thread**, **Process** hay kết hợp cả hai phụ thuộc vào yêu cầu cụ thể của ứng dụng, tài nguyên hệ thống và các yếu tố như khả năng mở rộng, độ phức tạp, bảo mật và hiệu suất.
+
+---
+
+#### 1. So sánh Thread và Process
+
+| Tiêu chí          | Thread                                  | Process                                  |
+|--------------------|----------------------------------------|------------------------------------------|
+| **Định nghĩa**     | Đơn vị thực thi trong một Process.     | Chương trình đang chạy với không gian bộ nhớ riêng. |
+| **Bộ nhớ**         | Chia sẻ bộ nhớ (heap, biến toàn cục). | Cô lập bộ nhớ (an toàn hơn).             |
+| **Tạo/Hủy**        | Nhanh, ít tốn tài nguyên.              | Chậm hơn, tốn nhiều tài nguyên.          |
+| **Đa luồng**       | Dễ dàng đồng bộ hóa giữa các Thread.   | Giao tiếp phức tạp (IPC: pipes, sockets...). |
+| **Lỗi**            | Một Thread sập có thể làm sập cả Process. | Process sập không ảnh hưởng Process khác. |
+| **Hiệu suất**      | Tốt cho tác vụ I/O-bound.              | Tốt cho CPU-bound (tận dụng đa lõi).     |
+| **Bảo mật**        | Kém an toàn do chia sẻ bộ nhớ.         | An toàn hơn nhờ cô lập.                  |
+
+---
+
+#### 2. Khi nào nên dùng Thread?
+
+- **Tác vụ I/O-bound** (đọc/ghi file, mạng, database...): Thread giúp chạy song song mà không tốn CPU.
+- **Chia sẻ dữ liệu dễ dàng**: Ví dụ: ứng dụng GUI (main thread xử lý giao diện, worker thread xử lý logic).
+- **Yêu cầu hiệu suất thấp**: Thread nhẹ hơn Process.
+- **Ví dụ**:
+  - Web server xử lý nhiều request cùng lúc (Node.js, Apache).
+  - Ứng dụng real-time (chat, game).
+
+---
+
+#### 3. Khi nào nên dùng Process?
+
+- **Tác vụ CPU-bound** (xử lý ảnh, mã hóa, tính toán...): Process tận dụng đa lõi CPU tốt hơn.
+- **Yêu cầu ổn định**: Process độc lập, lỗi không lan rộng.
+- **Bảo mật/quyền riêng biệt**: Ví dụ: trình duyệt (mỗi tab là Process riêng).
+- **Ví dụ**:
+  - Phần mềm render video (Blender, Adobe Premiere).
+  - Ứng dụng phân tán (microservices).
+
+---
+
+#### 4. Khi nào kết hợp cả hai?
+
+- **Tận dụng ưu điểm của cả hai**:
+  - **Mô hình đa Process + đa Thread**: Mỗi Process chứa nhiều Thread.
+  - **CPU-bound + I/O-bound**: Ví dụ: ứng dụng vừa render video (Process) vừa download dữ liệu (Thread).
+- **Ví dụ**:
+  - Database như PostgreSQL: Mỗi kết nối là Process, bên trong dùng Thread để xử lý query.
+  - Web server hiện đại (Nginx): Multi-process + multi-thread.
+
+---
+
+#### 5. Lưu ý quan trọng
+
+- **Đa lõi CPU**: Process phù hợp hơn để tận dụng đa lõi (do GIL trong Python chẳng hạn).
+- **Ngôn ngữ lập trình**:
+  - Python: `multiprocessing` cho CPU-bound, `threading` cho I/O-bound.
+  - Java/C#: Thread mạnh mẽ nhờ JVM/.NET runtime.
+- **Phức tạp đồng bộ hóa**: Thread cần cẩn thận với race condition, deadlock.
+
+---
+
 
 ### 4.
     ChatGPT được huấn luyện trên hệ thống phân tán gồm hàng ngàn GPU kết nối qua mạng tốc độ cao. Một số điểm chính:
