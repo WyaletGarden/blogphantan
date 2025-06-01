@@ -1,11 +1,11 @@
 ---
 title: "Ôn tập cuối kỳ"
-date: "2025-05-200"
+date: "2025-05-20"
 updated: "2025-05-20"
 categories:
   - "distributed-systems"
   - "networking"
-coverImage: "/images/blue.jpg"
+coverImage: "/images/eatinggrass.jpg"
 coverWidth: 16
 coverHeight: 9
 excerpt: Bài viết chứa nội dụng câu hỏi ôn tập thì cuối kì.

@@ -5,7 +5,7 @@ updated: "2025-05-29"
 categories:
   - "message queue"
   - "RPC"
-coverImage: "/images/traodoithongtin.png"
+coverImage: "/images/yellow.jpg"
 coverWidth: 16
 coverHeight: 9
 excerpt: Tìm hiểu về Message Queuing Services và RPC Libraries

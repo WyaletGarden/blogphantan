@@ -1,11 +1,11 @@
 ---
-title: "Giới thiệu Hệ thống phân tán"
-date: "2025-04-29"
-updated: "2025-04-29"
+title: "Blog 1: Giới thiệu Hệ thống phân tán"
+date: "2025-05-29"
+updated: "2025-05-29"
 categories:
   - "distributed-systems"
   - "networking"
-coverImage: "/images/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
+coverImage: "/images/blue.jpg"
 coverWidth: 16
 coverHeight: 9
 excerpt: Bài viết giới thiệu hệ thống phân tán, các khái niệm, kiến trúc và ví dụ minh họa.

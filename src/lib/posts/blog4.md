@@ -5,7 +5,7 @@ updated: "2025-05-30"
 categories:
   - "DNS"
   - "ISP"
-coverImage: "/images/b4.png"
+coverImage: "/images/red.jpg"
 coverWidth: 16
 coverHeight: 9
 excerpt: Tìm hiểu DNS và ISP

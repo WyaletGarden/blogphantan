@@ -5,7 +5,7 @@ updated: "2025-05-30"
 categories:
   - "Network Protocols"
   - "Distributed Computing"
-coverImage: "/images/b5.jpg"
+coverImage: "/images/bocchi.jpg"
 coverWidth: 16
 coverHeight: 9
 excerpt: Tìm hiểu các giao thức mạng và lập trình phân tán với OpenMPI

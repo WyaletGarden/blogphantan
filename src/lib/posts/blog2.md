@@ -5,7 +5,7 @@ updated: "2025-05-29"
 categories:
   - "thread"
   - "process"
-coverImage: "/images/b2.jpg"
+coverImage: "/images/pink.jpg"
 coverWidth: 16
 coverHeight: 9
 excerpt: Bài viết giới thiệu tiến trình và luồng
